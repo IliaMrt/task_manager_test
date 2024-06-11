@@ -1,10 +1,15 @@
-import { Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
+import {TasksService} from "./tasks.service";
+import {Task} from "./task.model";
+import {TaskDto} from "./task.dto";
 
 @Controller('tasks')
 export class TasksController {
+  constructor(private tasksService: TasksService) {
+  }
   @Post()
-  createNewTask() {
-    return 'createNewTask';
+  async createNewTask(@Body() task: TaskDto) {
+    return await this.tasksService.createNewTask(task);
   }
   @Get()
   getAllTasks() {

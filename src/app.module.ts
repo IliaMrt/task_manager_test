@@ -25,6 +25,6 @@ import { Task } from './tasks/task.model';
     }),
   ],
   controllers: [AppController, TasksController],
-  providers: [AppService, TasksService],
+  providers: [AppService],
 })
 export class AppModule {}
