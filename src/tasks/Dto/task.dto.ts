@@ -1,5 +1,5 @@
 import { StatusDto } from './status.dto';
-import {IsEnum, IsNotEmpty, Length} from 'class-validator';
+import { IsEnum, IsNotEmpty, Length } from 'class-validator';
 
 export class TaskDto {
   @IsNotEmpty()
@@ -7,6 +7,8 @@ export class TaskDto {
   head: string;
   description: string;
   @IsNotEmpty()
-  @IsEnum(['atWork' , 'complete'],{message: "Status must be 'atWork' or 'complete"})
+  @IsEnum(['atWork', 'complete'], {
+    message: "Status must be 'atWork' or 'complete",
+  })
   status: StatusDto;
 }

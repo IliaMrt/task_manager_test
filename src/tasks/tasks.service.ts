@@ -1,9 +1,8 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { TaskDto } from './Dto/task.dto';
 import { Task } from './task.model';
 import { InjectModel } from '@nestjs/sequelize';
-import { isNumber } from '@nestjs/common/utils/shared.utils';
-import {IdDto} from "./Dto/id.dto";
+import { IdDto } from './Dto/id.dto';
 
 @Injectable()
 export class TasksService {

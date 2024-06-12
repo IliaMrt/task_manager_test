@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common';
 import { TasksService } from './tasks.service';
 import { TaskDto } from './Dto/task.dto';
-import {IdDto} from "./Dto/id.dto";
+import { IdDto } from './Dto/id.dto';
 
 @Controller('tasks')
 export class TasksController {
